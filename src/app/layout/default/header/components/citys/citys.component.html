@@ -1,0 +1,39 @@
+<!--
+<nz-dropdown nzTrigger="click" nzPlacement="bottomRight">
+  <div class="item" nz-dropdown>
+    <div class="office-location">
+      <i class="icon-location-pin"></i>
+      <span>&nbsp;&nbsp;档案归属地：{{qymc}}</span>
+    </div>
+
+  </div>
+
+
+  <div nz-menu class="wd-xl animated jello" *ngIf="citys.length>1">
+
+    <nz-spin [nzSpinning]="loading" [nzTip]="'正在读取数据...'">
+
+      <div  nz-row [nzType]="'flex'" [nzJustinfy]="'center'" [nzAlign]="'middle'">
+        <nz-card   nzTitle="归属地切换" [nzBordered]="false"  [nzBodyStyle]="{'padding-top.px': 12, 'padding-bottom.px': 12 }" >
+          <div  >
+            <div nz-row [nzGutter]="12">
+
+              <div nz-col [nzSpan]="12"  *ngFor="let city of citys">
+                <nz-popconfirm [nzTitle]="'确定切换到'+city.name+'吗？'" (nzOnConfirm)="cityClick(city.code,city.qyId)" >
+                  <a nz-popconfirm>{{city.name}}</a>
+                </nz-popconfirm>
+              </div>
+            </div>
+          </div>
+        </nz-card>
+
+      </div>
+    </nz-spin>
+  </div>
+</nz-dropdown>
+-->
+
+<nz-input-group [nzAddOnBeforeIcon]="focus ? 'anticon anticon-arrow-down' : 'anticon anticon-search'">
+  <input nz-input [(ngModel)]="q" (focus)="qFocus()" (blur)="qBlur()"
+         [placeholder]="'menu.search.placeholder' | translate">
+</nz-input-group>

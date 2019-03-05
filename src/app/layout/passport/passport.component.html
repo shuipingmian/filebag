@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="top">
+    <div class="head">
+      <a [routerLink]="['/']">
+        <img class="logo" src="./assets/img/logo32.png">
+        <span class="title">用户登录</span>
+      </a>
+    </div>
+    <p class="desc"> </p>
+  </div>
+  <router-outlet></router-outlet>
+  <global-footer  >
+
+    <ng-template #copyright>
+      <div >
+        Copyright <i class="anticon anticon-copyright"></i>2018 <a href="#" target="_blank">{{settings.app.copyright}}</a>
+      </div>
+      <div style="margin-top: 10px;">
+        <a href="http://www.gisquest.com/" target="_blank">技术支持：浙江臻善科技股份有限公司</a>
+      </div>
+    </ng-template>
+  </global-footer>
+</div>

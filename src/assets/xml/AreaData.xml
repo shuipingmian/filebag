@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Element>
+    <ElementTable tableName="温州市">
+        <DataBaseLink Name="WENZHOULink"></DataBaseLink>
+    </ElementTable>
+    <ElementTable tableName="苍南县">
+        <DataBaseLink Name="CANGNANLink"></DataBaseLink>
+    </ElementTable>
+    <ElementTable tableName="乐清市">
+        <DataBaseLink Name="LEQINGLink"></DataBaseLink>
+    </ElementTable>
+    <ElementTable tableName="瑞安市">
+        <DataBaseLink Name="RUIANLink"></DataBaseLink>
+    </ElementTable>
+    <ElementTable tableName="经开区">
+        <DataBaseLink Name="JINGKAIQULink"></DataBaseLink>
+    </ElementTable>
+</Element>

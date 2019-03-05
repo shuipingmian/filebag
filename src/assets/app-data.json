@@ -1,0 +1,15 @@
+{
+    "app": {
+        "name": "衢州市不动产登记一窗受理云平台V2.0",
+        "description": "衢州市不动产登记一窗受理云平台V2.0",
+        "copyright": "衢州市国土资源局",
+        "enableArchives": 1,
+        "shareDataType": 1
+    },
+    "user": {
+        "name": "",
+        "avatar": "./assets/img/zorro.svg",
+        "email": ""
+    },
+    "data": []
+}

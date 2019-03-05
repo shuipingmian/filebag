@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Element>
+    <ElementTable ColumnName="sqrmc" CaptionName="申请人名称"></ElementTable>
+    <ElementTable ColumnName="sqrzjzl" CaptionName="申请人证件类型"></ElementTable>
+    <ElementTable ColumnName="sqrzjh" CaptionName="申请人证件号码"></ElementTable>
+    <ElementTable ColumnName="fddbr" CaptionName="法定代表人"></ElementTable>
+    <ElementTable ColumnName="bjlx" CaptionName="申请事项(办件类型)"></ElementTable>
+    <ElementTable ColumnName="slbm" CaptionName="受理部门"></ElementTable>
+    <ElementTable ColumnName="slsjstr" CaptionName="受理时间"></ElementTable>
+    <ElementTable ColumnName="blqx" CaptionName="办理期限"></ElementTable>
+</Element>

@@ -1,0 +1,212 @@
+<!--<div class="logo">
+  <a [routerLink]="['/']">
+    <img class="expanded" src="./assets/img/logofull1.png" alt="{{settings.app.name}}"  />
+    <img class="collapsed" src="./assets/img/logos1.png" alt="{{settings.app.name}}"   />
+  </a>
+
+</div>
+<div class="top-nav-wrap">
+  <ul class="top-nav">
+    &lt;!&ndash; Menu &ndash;&gt;
+    <li>
+      <div class="item" (click)="toggleCollapsedSideabar()">
+        <i class="anticon anticon-menu-{{settings.layout.collapsed ? 'unfold' : 'fold'}}"></i>
+      </div>
+    </li>
+
+    <li>
+      <a style="font-family:微软雅黑; color:white;font-size:24px;font-weight:bold;"class="item header-appname">{{settings.app.name}}</a>
+    </li>
+    &lt;!&ndash;<li>
+        <span style="font-family:微软雅黑; color:white;font-size:1.4em;font-weight:600;">宁波市不动产登记信息管理系统</span>
+    </li>&ndash;&gt;
+    &lt;!&ndash; Github Page &ndash;&gt;
+    &lt;!&ndash; <li>
+        <a class="item" href="//github.com/cipchk/ng-alain" target="_blank">
+            <i class="anticon anticon-github"></i>
+        </a>
+    </li> &ndash;&gt;
+    &lt;!&ndash; Lock Page &ndash;&gt;
+    &lt;!&ndash; <li class="hidden-xs">
+        <div class="item" [routerLink]="['/pages/lock']">
+            <i class="anticon anticon-lock"></i>
+        </div>
+    </li> &ndash;&gt;
+    &lt;!&ndash; Search Button &ndash;&gt;
+    &lt;!&ndash; <li class="header-search__btn" (click)="searchToggleChange()">
+       <div class="item">
+           <i class="anticon anticon-search"></i>
+       </div>
+   </li> &ndash;&gt;
+  </ul>
+  &lt;!&ndash; <header-search class="header-search" [toggleChange]="searchToggleStatus"></header-search> &ndash;&gt;
+  <ul class="top-nav">
+
+    <li class="hidden-xs">
+      <header-citys  (onChangerCity)="cityClick($event)"></header-citys>
+    </li>
+
+    &lt;!&ndash; Notify &ndash;&gt;
+    <li *ngIf="messageNotifyEnabled">
+      <header-notify></header-notify>
+    </li>
+
+
+
+
+
+    &lt;!&ndash; Task &ndash;&gt;
+    &lt;!&ndash; <li class="hidden-xs">
+        <header-task></header-task>
+    </li>
+    &lt;!&ndash; App Icons &ndash;&gt;
+    &lt;!&ndash; <li class="hidden-xs">
+        <header-icon></header-icon>
+    </li> &ndash;&gt;
+    &lt;!&ndash; Settings &ndash;&gt;
+    <li class="hidden-xs">
+      <nz-dropdown nzTrigger="click" nzPlacement="bottomRight">
+        <div class="item" nz-dropdown>
+          <i class="anticon anticon-setting"></i>
+        </div>
+        <div nz-menu style="width:200px;">
+          <div nz-menu-item class="theme-switch">
+            <header-theme></header-theme>
+          </div>
+          <div nz-menu-item>
+            <header-fullscreen></header-fullscreen>
+          </div>
+          <div nz-menu-item>
+            <header-storage></header-storage>
+          </div>
+          <div nz-menu-item>
+            <header-langs></header-langs>
+          </div>
+        </div>
+      </nz-dropdown>
+    </li>
+    <li class="hidden-xs">
+      <header-user></header-user>
+    </li>
+  </ul>
+</div>-->
+
+
+
+<style>
+
+
+  .header-appname{
+    font-size: 1.2rem;
+    margin-top: -0.3rem;
+  }
+  .header-left{
+    width: 11rem;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    flex-direction:row;
+    justify-content:center ;
+    align-items:center;
+
+  }
+  .header-left-c{
+    display: none;
+  }
+  .header-left span{
+    color: white;
+    font-size: 1.4rem;
+
+  }
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+<div class="alain-default__header-logo">
+  <a [routerLink]="['/']" class="alain-default__header-logo-link">
+    <img class="alain-default__header-logo-expanded" src="./assets/img/logofull1.png" alt="{{settings.app.name}}" style="max-height:40px;" />
+    <img class="alain-default__header-logo-collapsed" src="./assets/img/logos1.png" alt="{{settings.app.name}}" style="max-height:30px;" />
+  </a>
+</div>
+<div class="alain-default__nav-wrap">
+  <ul class="alain-default__nav">
+    <!-- Menu -->
+    <li>
+      <div class="alain-default__nav-item" (click)="toggleCollapsedSidebar()">
+        <i nz-icon type="menu-{{settings.layout.collapsed ? 'unfold' : 'fold'}}"></i>
+      </div>
+    </li>
+    <!-- Github Page -->
+    <li>
+      <a style="font-family:微软雅黑; color:white;font-size:24px;font-weight:bold;"class="item header-appname">{{settings.app.name}}</a>
+
+    </li>
+
+
+
+    <li class="hidden-xs" style="margin-left: 500px;">
+
+      <header-citys  >&lt;!&ndash;(onChangerCity)="cityClick($event)"&ndash;&gt;</header-citys>
+
+
+    </li>
+
+    <!--  &lt;!&ndash; Lock Page &ndash;&gt;
+      <li class="hidden-mobile">
+        <div class="alain-default__nav-item" routerLink="/passport/lock">
+          <i nz-icon type="lock"></i>
+        </div>
+      </li>
+      &lt;!&ndash; Search Button &ndash;&gt;
+      <li class="hidden-pc" (click)="searchToggleChange()">
+        <div class="alain-default__nav-item">
+          <i nz-icon type="search"></i>
+        </div>
+      </li>-->
+    <!-- </ul>
+     <header-search class="alain-default__search" [toggleChange]="searchToggleStatus"></header-search>
+     <ul class="alain-default__nav">-->
+    <!-- Notify -->
+    <li>
+      <header-notify></header-notify>
+    </li>
+
+    <!-- <li class="hidden-mobile">
+       <header-task></header-task>
+     </li>-->
+    <!-- App Icons -->
+    <li class="hidden-mobile">
+      <header-icon></header-icon>
+    </li>
+    <!-- Settings -->
+    <li class="hidden-mobile">
+      <nz-dropdown nzTrigger="click" nzPlacement="bottomRight">
+        <div class="alain-default__nav-item" nz-dropdown>
+          <i class="anticon anticon-setting"></i>
+        </div>
+        <div nz-menu style="width:200px;">
+          <div nz-menu-item>
+            <header-fullscreen></header-fullscreen>
+          </div>
+          <div nz-menu-item>
+            <header-storage></header-storage>
+          </div>
+          <div nz-menu-item>
+            <header-i18n></header-i18n>
+          </div>
+        </div>
+      </nz-dropdown>
+    </li>
+    <li class="hidden-mobile">
+      <header-user></header-user>
+    </li>
+  </ul>
+</div>
