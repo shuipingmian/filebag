@@ -29,6 +29,17 @@ const routes: Routes = [
       // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
     ]
   },
+// modules /workflow 路由 配置
+  {
+    path: '',
+    component: LayoutDefaultComponent,
+    children: [
+      { path: 'workflow', loadChildren: './modules/workflow./workflow.module#WorkflowModule' }
+    ]
+  },
+
+
+
   // 全屏布局
   // {
   //     path: 'fullscreen',
