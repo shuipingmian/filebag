@@ -34,7 +34,7 @@ const routes: Routes = [
     path: '',
     component: LayoutDefaultComponent,
     children: [
-      { path: 'workflow', loadChildren: './modules/workflow./workflow.module#WorkflowModule' }
+      { path: 'workflow', loadChildren: './modules/workflow/workflow.module#WorkflowModule' }
     ]
   },
 
