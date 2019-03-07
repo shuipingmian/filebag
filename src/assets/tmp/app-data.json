@@ -10,13 +10,13 @@
   },
   "menu": [
     {
-      "text": "主导航",
+      "text": "1111111",
       "i18n": "menu.main",
       "group": true,
       "hideInBreadcrumb": true,
       "children": [
         {
-          "text": "仪表盘",
+          "text": "11111",
           "i18n": "menu.dashboard",
           "icon": "anticon anticon-dashboard",
           "children": [

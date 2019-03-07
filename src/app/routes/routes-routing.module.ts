@@ -25,18 +25,20 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘' } },
       { path: 'exception', loadChildren: './exception/exception.module#ExceptionModule' },
-      // 业务子模块
-      // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
+      {
+        path: 'workflow',
+        loadChildren: './modules/workflow/workflow.module#WorkflowModule',
+      }
     ]
   },
 // modules /workflow 路由 配置
-  {
-    path: '',
-    component: LayoutDefaultComponent,
-    children: [
-      { path: 'workflow', loadChildren: './modules/workflow/workflow.module#WorkflowModule' }
-    ]
-  },
+//   {
+//     path: '',
+//     component: LayoutDefaultComponent,
+//     children: [
+//       { path: 'workflow', loadChildren: './modules/workflow/workflow.module#WorkflowModule' }
+//     ]
+//   },
 
 
 

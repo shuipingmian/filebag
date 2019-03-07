@@ -1,0 +1,51 @@
+<!--新增流程配置界面-->
+<div nz-row [nzGutter]="16">
+  <nz-card>
+    <form nz-form>
+      <div nz-row nz-form-item >
+        <div nz-col class="text-center">
+          <div nz-col nz-form-label [nzSpan]="4">
+            <label>办件信息</label>
+          </div>
+          <div nz-col nz-form-control [nzSpan]="7">
+            <input nz-input placeholder="请输入办件编号"  [(ngModel)]="queryParam" name="queryParam"/>
+            <!--使用ngModel双向绑定时,这里的name属性需要有属性值否则会报错-->
+          </div>
+          <div nz-col [nzSpan]="8">
+            <!-- <label nz-checkbox [(ngModel)]="isLike" [ngModelOptions]="{standalone: true}">
+                 <span>模糊</span>
+             </label>-->
+            <button nz-button nzType="primary" >查询</button>
+            <button nz-button  >清空</button>
+            <!--<button nz-button nzType="primary" (click)="save()" [nzLoading]="_operating">新增</button>-->
+            <!--<button nz-button (click)="showModalT()" [disabled]="_disabledButton" [nzType]="'primary'" [nzLoading]="_operating">删除</button>-->
+          </div>
+        </div>
+      </div>
+    </form>
+  </nz-card>
+  <nz-card>
+    <div>
+      <!--这里到——pageindex和_pagesize都要是双向绑定，否则在组件中检测不到视图中值得变化
+      这里的数据源需要用异步的数据源-->
+      <nz-table   #acceptanceTable
+                  [nzScroll]="{y:600,x:'100%'}"
+                >
+        <thead nz-thead>
+        <tr>
+          <th nowrap="nowrap" class="text-center"  nz-th><span>受理网点</span></th>
+          <th  nowrap="nowrap" class="text-center" nz-th><span>档案归属地</span></th>
+          <th nowrap="nowrap" class="text-center" nz-th><span>办件编号</span></th>
+          <th nowrap="nowrap" class="text-center" nz-th><span>登记类型</span></th>
+          <th nowrap="nowrap" class="text-center" nz-th><span>受理时间</span></th>
+          <th nowrap="nowrap" class="text-center" nz-th><span>操作</span></th>
+        </tr>
+        </thead>
+        <tbody nz-tbody>
+        <tr nz-tbody-tr >
+        </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </nz-card>
+</div>
