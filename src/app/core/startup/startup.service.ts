@@ -126,13 +126,14 @@ export class StartupService {
           },
           {
             text: '档案袋测试',
-            link: '/dashboard',
+            link: '/all',
             icon: { type: 'icon', value: 'appstore' }
           },
           {
             text: '测试弹出框',
-            link: '/workflow',
-            icon: { type: 'icon', value: 'appstore' }
+            link: '/workflow/all',
+            icon: { type: 'icon', value: 'appstore' },
+            "reuse": false,
           },
         ]
       }
