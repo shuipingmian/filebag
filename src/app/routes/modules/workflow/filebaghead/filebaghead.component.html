@@ -1,0 +1,10 @@
+<div class="ztree-box" style="height: 100%" nz-menu [nzMode]="'inline'">
+  <div class="title">
+    <h4>档案袋</h4>
+  </div>
+  <nz-tree
+    [nzData]="nodes"
+    nzShowLine
+    (nzClick)="nzEvent($event)">
+  </nz-tree>
+</div>

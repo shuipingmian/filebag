@@ -3,10 +3,16 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+//配置Antd
+import { FormsModule } from '@angular/forms';
+import { zh_CN } from 'ng-zorro-antd';
+import zh from '@angular/common/locales/zh';
+
 // #region default language
 // 参考：https://ng-alain.com/docs/i18n
 import { default as ngLang } from '@angular/common/locales/zh';
-import { NZ_I18N, zh_CN as zorroLang } from 'ng-zorro-antd';
+import { NgZorroAntdModule,NZ_I18N, zh_CN as zorroLang } from 'ng-zorro-antd';
 import { DELON_LOCALE, zh_CN as delonLang } from '@delon/theme';
 const LANG = {
   abbr: 'zh',
@@ -93,6 +99,7 @@ import { AppComponent } from './app.component';
 import { RoutesModule } from './routes/routes.module';
 import { LayoutModule } from './layout/layout.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -100,10 +107,15 @@ import { LayoutModule } from './layout/layout.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+
+    /** 导入 ng-zorro-antd 模块 **/
+    NgZorroAntdModule,
     HttpClientModule,
     DelonModule.forRoot(),
     CoreModule,
     SharedModule,
+    NgZorroAntdModule.forRoot(),
     LayoutModule,
     RoutesModule,
     ...I18NSERVICE_MODULES,

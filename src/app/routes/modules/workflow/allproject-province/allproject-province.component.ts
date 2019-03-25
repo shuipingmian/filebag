@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NavigationExtras, Router} from "@angular/router";
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'
+import {navigationCancelingError} from "@angular/router/src/shared";
 @Component({
   selector: 'app-allproject-province',
   templateUrl: './allproject-province.component.html',
@@ -27,7 +28,10 @@ export class AllprojectProvinceComponent implements OnInit {
     const navigationExtras: NavigationExtras = {
       queryParams: this.data
     };
+
     this.router.navigate(['/filebag'], navigationExtras);
   }
-
+  open1(){
+     this.router.navigate( ['/filebag/test']);
+  }
 }

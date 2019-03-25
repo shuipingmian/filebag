@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared';
-import {FilebagComponent} from './filebag/filebag.component';
 import { AllprojectProvinceComponent } from './allproject-province/allproject-province.component';
 import {WorkflowRoutingModule} from "./workflow-routing.module";
-import { CesiComponent } from './cesi/cesi.component';
+import { FilebagComponent } from './filebag/filebag.component';
+import { FilebagfunComponent } from './filebagfun/filebagfun.component';
+import { FilebagheadComponent } from './filebaghead/filebaghead.component';
+import {FilebagtabComponent} from "./filebag/filebagtab/filebagtab.component";
 
 
 const COMPONENTS = [
@@ -22,7 +24,10 @@ const COMPONENTS_NOROUNT = [
     ...COMPONENTS_NOROUNT,
     AllprojectProvinceComponent,
     FilebagComponent,
-    CesiComponent,
+    FilebagfunComponent,
+    FilebagheadComponent,
+    FilebagtabComponent,
+
   ],
   entryComponents: COMPONENTS_NOROUNT
 })

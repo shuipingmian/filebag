@@ -11,6 +11,11 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 // single pages
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
+import {WorkflowModule} from "./modules/workflow/workflow.module";
+import {FilebagModule} from "./modules/workflow/filebag/filebag.module";
+
+import {SudoModule} from "./modules/sudo/sudo.module";
+
 
 const COMPONENTS = [
   DashboardComponent,
@@ -25,10 +30,11 @@ const COMPONENTS = [
 const COMPONENTS_NOROUNT = [];
 
 @NgModule({
-  imports: [ SharedModule, RouteRoutingModule ],
+  imports: [ SharedModule,WorkflowModule,SudoModule,FilebagModule, RouteRoutingModule ],
   declarations: [
     ...COMPONENTS,
-    ...COMPONENTS_NOROUNT
+    ...COMPONENTS_NOROUNT,
+
   ],
   entryComponents: COMPONENTS_NOROUNT
 })

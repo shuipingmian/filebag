@@ -15,6 +15,9 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 // single pages
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
+import { CanActivate } from '@angular/router';
+
+
 
 const routes: Routes = [
   {
@@ -25,10 +28,10 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘' } },
       { path: 'exception', loadChildren: './exception/exception.module#ExceptionModule' },
-      {
-        path: 'workflow',
-        loadChildren: './modules/workflow/workflow.module#WorkflowModule',
-      }
+      { path:'workflow',loadChildren:'./modules/workflow/workflow.module#WorkflowModule'  },
+      { path:'sudo',loadChildren:'./modules/sudo/sudo.module#SudoModule'  },
+      {path: 'dues', loadChildren: './modules/dues/dues.module#DuesModule'},
+
     ]
   },
 // modules /workflow 路由 配置

@@ -3,7 +3,25 @@
   this is  ok  my name
     <small>Welcome !</small>
   </h1>
-  <a routerLink="routes">1111</a>
-
-  <router-outlet></router-outlet>
+  <button (click)="open1()">打开档案袋</button>
+  <button (click)="open2()">打开子测试袋</button>
 </div>
+<nz-tabset>
+  <nz-tab nzTitle="Tab 1">
+    Content of Tab Pane 1
+  </nz-tab>
+  <nz-tab nzTitle="Tab 2">
+    Content of Tab Pane 2
+  </nz-tab>
+  <nz-tab nzTitle="Tab 3">
+    Content of Tab Pane 3
+  </nz-tab>
+</nz-tabset>
+
+
+<!--
+<nz-card style="width:300px;" nzTitle="Card title" [nzExtra]="extraTemplate">
+  <p>Card content</p>
+  <p>Card content</p>
+  <p>Card content</p>
+</nz-card>-->

@@ -126,7 +126,7 @@ export class StartupService {
           },
           {
             text: '档案袋测试',
-            link: '/all',
+            link: '/sudo/seting',
             icon: { type: 'icon', value: 'appstore' }
           },
           {
@@ -135,6 +135,12 @@ export class StartupService {
             icon: { type: 'icon', value: 'appstore' },
             "reuse": false,
           },
+          {
+            text: '快捷菜单',
+            icon: { type: 'icon', value: 'rocket' },
+            shortcutRoot: true,
+            link: '/dashboard',
+          }
         ]
       }
     ]);
